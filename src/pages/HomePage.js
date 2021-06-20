@@ -6,12 +6,15 @@ import {
   Link
 } from "react-router-dom";
 
-import AboutPage from './pages/AboutPage'
-import ClockPage from './pages/ClockPage'
+import AboutPage from './AboutPage'
+import ClockPage from './ClockPage'
+import Counter from '../components/Counter'
+import '../App.css';
 
-import './App.css';
+
 
 export default function App() {
+
   return (
     <Router>
       <div>
@@ -39,7 +42,12 @@ export default function App() {
             <ClockPage />
           </Route>
           <Route path="/">
-            <Home />
+            <Home>
+             sample texf
+            </Home>
+            <Counter counterValue={666}/>
+
+
           </Route>
         </Switch>
       </div>
@@ -50,4 +58,3 @@ export default function App() {
 function Home() {
   return <h2>Home</h2>;
 }
-
